@@ -14,24 +14,24 @@
   color: hsl(231, 11%, 63%);
 }
 
-.extras{
+.extras {
   color: hsl(243, 100%, 62%);
 }
 
-.checkbox{
+.checkbox {
   background-color: hsl(243, 100%, 62%);
 }
-.checkbox:hover{
+.checkbox:hover {
   background-color: hsl(228, 100%, 84%);
 }
-.onChange:hover{
+.onChange:hover {
   color: hsl(243, 100%, 62%);
 }
-.bg-addons{
-  background-color:  hsl(231, 100%, 99%);
+.bg-addons {
+  background-color: hsl(231, 100%, 99%);
 }
 
-.addons{
+.addons {
   border: 1px solid hsl(243, 100%, 62%);
 }
 
@@ -43,11 +43,11 @@
   border: 1px solid hsl(229, 24%, 87%);
 }
 
-.inputs-error{
+.inputs-error {
   border: 1px solid hsl(354, 84%, 57%);
 }
 
-.inputs-focus:focus{
+.inputs-focus:focus {
   border: 1px solid hsl(243, 100%, 62%);
 }
 
@@ -98,4 +98,3 @@
   font-weight: 700;
   font-style: italic;
 }
-
