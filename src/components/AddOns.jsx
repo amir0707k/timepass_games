@@ -1,17 +1,7 @@
 "use client";
 import { useState } from "react";
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/components/AddOns.jsx
-import { Checkbox } from "../components/ui/checkbox";
-import { Card } from "../components/ui/card";
-========
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card } from "@/components/ui/card";
->>>>>>>> desktop-version:src/Components/AddOns.jsx
-=======
-import { Checkbox } from "@/components/ui/checkbox";
-import { Card } from "@/components/ui/card";
->>>>>>> desktop-version
 
 import { useSubscription } from "../context/SubscriptionContext";
 
