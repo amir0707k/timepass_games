@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Card } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox.tsx";
+import { Card } from "@/components/ui/card.tsx";
 
 import { useSubscription } from "../context/SubscriptionContext";
 
