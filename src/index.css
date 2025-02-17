@@ -1,5 +1,4 @@
 /* ✅ Move @import to the top */
-@import url('./fonts.css'); 
 @import "tailwindcss";
 
 
@@ -12,23 +11,7 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: "Ubuntu";
-    src: url("/fonts/Ubuntu-Regular.ttf") format("truetype");
-    font-weight: 400;
-  }
-
-  @font-face {
-    font-family: "Ubuntu";
-    src: url("/fonts/Ubuntu-Medium.ttf") format("truetype");
-    font-weight: 500;
-  }
-
-  @font-face {
-    font-family: "Ubuntu";
-    src: url("/fonts/Ubuntu-Bold.ttf") format("truetype");
-    font-weight: 700;
-  }
+  
 
   body {
     font-family: "Ubuntu", sans-serif;
