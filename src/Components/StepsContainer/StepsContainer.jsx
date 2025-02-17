@@ -4,7 +4,8 @@ import SelectPlan from "../SelectPlan";
 import AddOns from "../AddOns";
 import Summary from "../Summary";
 import Finish from "../Finish";
-import Sidebar from "../sidebar";
+import Sidebar from "../Sidebar";
+
 import { useSubscription } from "../../context/SubscriptionContext";
 
 function StepsContainer() {
