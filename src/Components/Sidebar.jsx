@@ -11,7 +11,7 @@ function Sidebar({ className, step }) {
   ];
 
   return (
-    <div className={`absolute top-0 left-0 w-full xl:h-full xl:w-1/3 xl:block xl:relative ${className}`}>
+    <div className={`absolute top-0 left-0 w-full xl:h-full xl:w-fit xl:block xl:relative ${className}`}>
       <img
         src={sidebarMobile}
         className="w-full h-full xl:hidden"

@@ -21,6 +21,12 @@
 .checkbox{
   background-color: hsl(243, 100%, 62%);
 }
+.checkbox:hover{
+  background-color: hsl(228, 100%, 84%);
+}
+.onChange:hover{
+  color: hsl(243, 100%, 62%);
+}
 .bg-addons{
   background-color:  hsl(231, 100%, 99%);
 }
@@ -35,6 +41,14 @@
 
 .inputs {
   border: 1px solid hsl(229, 24%, 87%);
+}
+
+.inputs-error{
+  border: 1px solid hsl(354, 84%, 57%);
+}
+
+.inputs-focus:focus{
+  border: 1px solid hsl(243, 100%, 62%);
 }
 
 .ubuntu-light {

@@ -37,10 +37,9 @@
 
 @layer components {
   .input-field {
-    @apply w-full p-4 py-3 rounded-md focus:outline-none focus:ring-2 placeholder:font-semibold;
+    @apply w-full p-4 py-3 rounded-md focus:outline-none placeholder:font-semibold;
   }
 
-  /* ✅ Fix .bg-title to be usable */
   .bg-title {
     @apply bg-[hsl(213,96%,18%)];
   }
@@ -101,8 +100,15 @@ body {
 
 .back-button{
   color: hsl(231, 11%, 63%);
+  transition: all 0.3s;
   font-weight: 500;
 }
+
+.back-button:hover{
+  color: hsl(213, 96%, 18%);
+  transition: all 0.3s;
+}
+
 
 .dark {
   --background: hsl(240 10% 3.9%);

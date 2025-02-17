@@ -1,7 +1,7 @@
 "use client";
 import { useSubscription } from "../context/SubscriptionContext";
 
-const Summary = ({ setStep }) => {
+const Summary = ({ setStep, className }) => {
   const { formData, planPrices, addOnPrices, addOnsList, calculateTotalPrice } =
     useSubscription();
 
@@ -10,7 +10,7 @@ const Summary = ({ setStep }) => {
     formData.billing.charAt(0).toUpperCase() + formData.billing.slice(1);
 
   return (
-    <div className="bg-white rounded-xl w-full max-w-md mx-auto">
+    <div className={`bg-white rounded-xl w-full max-w-md mx-auto ${className}`}>
       <h2 className="text-2xl font-bold title mb-2">Finishing up</h2>
       <p  className="info text-lg my-7 mt-2 pr-6">
         Double-check everything looks OK before confirming.
@@ -24,7 +24,7 @@ const Summary = ({ setStep }) => {
               {billingPeriod})
             </h3>
             <button
-              className="info underline hover:text-blue-600 text-md font-medium info"
+              className="underline onChange text-md font-medium info cursor-pointer transition-all"
               onClick={() => setStep(2)}
             >
               Change

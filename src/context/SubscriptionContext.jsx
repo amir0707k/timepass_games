@@ -3,6 +3,26 @@ import { createContext, useContext, useState } from "react";
 const SubscriptionContext = createContext();
 
 export const SubscriptionProvider = ({ children }) => {
+
+  const validateName = (name) => {
+    if (!name.trim()) return "Name is required";
+    return "";
+  };
+
+  const validateEmail = (email) => {
+    if (!email.trim()) return "Email is required";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) return "Invalid email address";
+    return "";
+  };
+
+  const validatePhone = (phone) => {
+    if (!phone.trim()) return "Phone number is required";
+    const phoneRegex = /^\+?[0-9]{10,}$/;
+    if (!phoneRegex.test(phone)) return "Invalid phone number";
+    return "";
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -43,7 +63,7 @@ export const SubscriptionProvider = ({ children }) => {
 
   return (
     <SubscriptionContext.Provider
-      value={{ formData, setFormData, planPrices, addOnPrices, calculateTotalPrice, addOnsList }}
+      value={{ formData, setFormData, planPrices, addOnPrices, calculateTotalPrice, addOnsList, validateName, validateEmail, validatePhone }}
     >
       {children}
     </SubscriptionContext.Provider>

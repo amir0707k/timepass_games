@@ -1,9 +1,9 @@
 import React from "react";
 import thankYou from '/assets/images/icon-thank-you.svg';
 
-function Finish() {
+function Finish({className}) {
   return (
-    <div className="flex flex-col items-center justify-center text-center  py-10">
+    <div className={`flex flex-col items-center justify-center text-center py-10 ${className} xl:w-[521px] xl:h-full`}>
       
       <div className=" bg-gray-200 rounded-full mb-6 flex items-center justify-center">
         <img src={thankYou}/>
