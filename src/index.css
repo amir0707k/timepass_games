@@ -1,6 +1,7 @@
 /* ✅ Move @import to the top */
-@import "tailwindcss";
 @import url('./fonts.css'); 
+@import "tailwindcss";
+
 
 
 @plugin "tailwindcss-animate";
@@ -57,7 +58,7 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  /* -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
   --background: hsl(0 0% 100%);
   --foreground: hsl(240 10% 3.9%);
   --card: hsl(0 0% 100%);
@@ -82,7 +83,7 @@
   --chart-3: hsl(197 37% 24%);
   --chart-4: hsl(43 74% 66%);
   --chart-5: hsl(27 87% 67%);
-  --radius: 0.6rem; */
+  --radius: 0.6rem;
 }
 
 body {
@@ -90,7 +91,7 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
   background-color: hsl(217, 100%, 97%);
 }
 
@@ -103,7 +104,7 @@ body {
   font-weight: 500;
 }
 
-/* .dark {
+.dark {
   --background: hsl(240 10% 3.9%);
   --foreground: hsl(0 0% 98%);
   --card: hsl(240 10% 3.9%);
@@ -168,4 +169,4 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-} */
+}

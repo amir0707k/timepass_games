@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import YourInfo from "../YourInfo";
 import SelectPlan from "../SelectPlan";
 import AddOns from "../AddOns";
@@ -29,55 +29,33 @@ function StepsContainer() {
     }
   };
 
-
-  const [dynamicMinHeight, setDynamicMinHeight] = useState("100vh");
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const checkHeight = () => {
-      if (containerRef.current) {
-        const containerHeight = containerRef.current.offsetHeight;
-        const viewportHeight = window.innerHeight;
-
-        // If content is shorter than viewport, apply extra height
-        if (containerHeight < viewportHeight) {
-          setDynamicMinHeight("calc(100vh + 175px)");
-        } else {
-          setDynamicMinHeight("100vh"); // Reset if content is already tall enough
-        }
-      }
-    };
-
-    checkHeight(); // Run initially
-    window.addEventListener("resize", checkHeight); // Adjust on window resize
-
-    return () => window.removeEventListener("resize", checkHeight);
-  }, []);
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full flex flex-col items-center"
-      style={{ minHeight: dynamicMinHeight }}
-    >
+    <div className="main-container relative h-full w-full flex flex-col items-center justify-between md:flex-row md:p-6 md:bg-white md:w-[80%] md:h-[75%] md:mx-auto md:justify-between">
       <Sidebar className="z-0" step={step} />
-      <div className="relative mb-52 z-10 w-[90%] md:w-[60%] lg:w-[40%] mx-auto top-28 md:mt-10 bg-white px-6 py-10 rounded-xl shadow-lg">
+      <div className="relative mb-24 z-10 w-[90%] md:w-[70%] lg:w-[40%] mx-auto top-28 bg-white p-6 pb-10 rounded-xl shadow-lg md:px-28 md:mx-auto md:shadow-none md:static md:m-0">
         {renderStep()}
       </div>
-      {step>4 ? "" : <div className="flex justify-between fixed z-20 w-full bottom-0 mt-6 text-right p-5 bg-white">
+      {
+        step > 4 ? "" : <div className="flex justify-between sticky z-20 w-full bottom-0 mt-6 text-right p-5 bg-white md:hidden">
         <button
           onClick={prevStep}
-          className={`${step > 1 ? "" : "invisible"} visibility-hidden back-button text-lg`}
+          className={`${
+            step > 1 ? "" : "invisible"
+          } visibility-hidden back-button text-lg`}
         >
           Go Back
         </button>
 
         <button
           onClick={nextStep}
-          className={`${step === 4 ? 'checkbox' : 'bg-title'} text-white py-3 px-6 rounded-sm hover:bg-purple-700 transition self-end`}
+          className={`${
+            step === 4 ? "checkbox" : "bg-title"
+          } text-white py-3 px-6 rounded-sm hover:bg-purple-700 transition self-end`}
         >
-          {step === 4 ? 'Confirm' : 'Next Step'}
+          {step === 4 ? "Confirm" : "Next Step"}
         </button>
-      </div>}
+      </div>
+      }
       
     </div>
   );

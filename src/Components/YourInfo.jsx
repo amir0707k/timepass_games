@@ -2,14 +2,15 @@ import React from "react";
 import { useSubscription } from "../context/SubscriptionContext";
 
 const YourInfo = () => {
-  const { formData, setFormData } = useSubscription(); 
+  const { formData, setFormData } = useSubscription();
+
   return (
-    <div className={`w-full bg-white rounded-lg mx-auto`}>
+    <div className="w-full bg-white rounded-lg mx-auto md:mx-0">
       <h2 className="text-2xl font-stretch-200% font-bold title">Personal info</h2>
-      <p className="info font-normal text-lg my-3 pr-6" >
+      <p className="info font-normal text-lg my-3 pr-6">
         Please provide your name, email address, and phone number.
       </p>
-      
+
       <div className="space-y-4">
         <div>
           <label className="text-sm font-medium title">Name</label>
@@ -21,7 +22,7 @@ const YourInfo = () => {
             className="input-field inputs"
           />
         </div>
-        
+
         <div>
           <label className="text-sm font-medium title">Email Address</label>
           <input
@@ -32,7 +33,7 @@ const YourInfo = () => {
             className="input-field inputs"
           />
         </div>
-        
+
         <div>
           <label className="text-sm font-medium title">Phone Number</label>
           <input
@@ -44,8 +45,6 @@ const YourInfo = () => {
           />
         </div>
       </div>
-      
-     
     </div>
   );
 };
