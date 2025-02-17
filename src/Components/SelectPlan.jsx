@@ -27,12 +27,12 @@ function SelectPlan() {
       </p>
 
       {/* Plan options */}
-      <div className="flex flex-col md:flex-row gap-4 mb-6">
+      <div className="flex flex-col xl:flex-row gap-4 mb-6">
         {Object.entries(planPrices).map(([plan, price]) => (
           <div
             key={plan}
             onClick={() => handlePlanChange(plan)}
-            className={`flex border gap-3 items-center p-4 rounded cursor-pointer w-full md:w-1/3 ${
+            className={`flex border gap-3 items-center p-4 rounded cursor-pointer w-full xl:w-1/3 xl:flex-col xl:items-start ${
               formData.plan === plan
                 ? "border-blue-600 bg-blue-50"
                 : "border-gray-300"
