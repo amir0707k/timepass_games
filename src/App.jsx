@@ -6,7 +6,9 @@ import { SubscriptionProvider } from "./context/SubscriptionContext";
 function App() {
   return (
     <SubscriptionProvider>
-      <StepsContainer />
+      <div className="h-full w-full flex justify-center items-center">
+        <StepsContainer />
+      </div>
     </SubscriptionProvider>
   );
 }

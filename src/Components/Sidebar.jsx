@@ -4,14 +4,14 @@ import sidebarDesktop from "/assets/images/bg-sidebar-desktop.svg";
 
 function Sidebar({ className, step }) {
   const steps = [
-    { number: 1, label: "Your Info" },
-    { number: 2, label: "Select Plan" },
-    { number: 3, label: "Add-Ons" },
-    { number: 4, label: "Summary" },
+    { number: 1, label: "YOUR INFO" },
+    { number: 2, label: "SELECT PLAN" },
+    { number: 3, label: "ADD-ONS" },
+    { number: 4, label: "SUMMARY" },
   ];
 
   return (
-    <div className={`absolute top-0 left-0 w-full ${className}`}>
+    <div className={`absolute top-0 left-0 w-full md:h-full md:w-1/3 md:block md:relative ${className}`}>
       <img
         src={sidebarMobile}
         className="w-full h-full md:hidden"
@@ -19,12 +19,12 @@ function Sidebar({ className, step }) {
       />
       <img
         src={sidebarDesktop}
-        className="w-full h-full object-cover hidden md:block"
+        className= "h-full hidden md:block"
         alt="Sidebar Background"
       />
-      <div className="absolute top-10 flex px-40 gap-4 items-center justify-center md:flex-row w-full">
+      <div className="absolute top-10 flex px-40 gap-4 items-center justify-center  w-full md:flex-col md:left-8 md:gap-12 md:px-0">
         {steps.map((s) => (
-          <div key={s.number} className="flex items-center gap-4 mx-auto ">
+          <div key={s.number} className="flex items-center gap-4 mx-auto w-full">
             <div
               className={`w-10 h-10 flex items-center justify-center rounded-full border ${
                 step === s.number
@@ -34,9 +34,9 @@ function Sidebar({ className, step }) {
             >
               {s.number}
             </div>
-            <div className="hidden md:block">
+            <div className="hidden md:flex md:flex-col">
               <p className="text-sm text-gray-300">STEP {s.number}</p>
-              <p className="text-sm text-white font-bold">{s.label}</p>
+              <p className="text-sm text-white font-bold whitespace-nowrap">{s.label}</p>
             </div>
           </div>
         ))}
