@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card } from "@/components/ui/card";
+
 import { useSubscription } from "../context/SubscriptionContext";
 
 const AddOns = ({className}) => {
