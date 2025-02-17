@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import StepsContainer from "./Components/StepsContainer/StepsContainer";
+import StepsContainer from "./components/StepsContainer/StepsContainer";
 
 import { SubscriptionProvider } from "./context/SubscriptionContext";
 
