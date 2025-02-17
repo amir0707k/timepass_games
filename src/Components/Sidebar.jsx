@@ -11,18 +11,18 @@ function Sidebar({ className, step }) {
   ];
 
   return (
-    <div className={`absolute top-0 left-0 w-full md:h-full md:w-1/3 md:block md:relative ${className}`}>
+    <div className={`absolute top-0 left-0 w-full xl:h-full xl:w-fit xl:block xl:relative ${className}`}>
       <img
         src={sidebarMobile}
-        className="w-full h-full md:hidden"
+        className="w-full h-full xl:hidden"
         alt="Sidebar Background"
       />
       <img
         src={sidebarDesktop}
-        className= "h-full hidden md:block"
+        className= "h-full hidden xl:block"
         alt="Sidebar Background"
       />
-      <div className="absolute top-10 flex px-40 gap-4 items-center justify-center  w-full md:flex-col md:left-8 md:gap-12 md:px-0">
+      <div className="absolute top-10 flex px-40 gap-4 items-center justify-center  w-full xl:flex-col xl:left-8 xl:gap-12 xl:px-0">
         {steps.map((s) => (
           <div key={s.number} className="flex items-center gap-4 mx-auto w-full">
             <div
@@ -34,7 +34,7 @@ function Sidebar({ className, step }) {
             >
               {s.number}
             </div>
-            <div className="hidden md:flex md:flex-col">
+            <div className="hidden xl:flex xl:flex-col">
               <p className="text-sm text-gray-300">STEP {s.number}</p>
               <p className="text-sm text-white font-bold whitespace-nowrap">{s.label}</p>
             </div>

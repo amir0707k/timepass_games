@@ -4,7 +4,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Card } from "@/components/ui/card";
 import { useSubscription } from "../context/SubscriptionContext";
 
-const AddOns = () => {
+const AddOns = ({className}) => {
   const [selectedAddOns, setSelectedAddOns] = useState([]);
   const { formData, setFormData, addOnPrices, addOnsList } = useSubscription();
 
@@ -37,7 +37,7 @@ const AddOns = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl w-full max-w-md mx-auto">
+    <div className={`${className}`}>
       <h2 className="text-2xl font-bold title">Pick add-ons</h2>
       <p className="info font-normal text-lg my-7 mt-2">Add-ons help enhance your gaming experience.</p>
 
@@ -45,7 +45,7 @@ const AddOns = () => {
         {addOnsList.map((addon) => (
           <Card
             key={addon.id}
-            className={`flex items-center justify-between p-4 rounded-lg cursor-pointer transition ${
+            className={`flex items-center justify-between p-4 rounded-lg cursor-pointer hover:border-[hsl(243,100%,62%)] transition ${
               selectedAddOns.includes(addon.id) ? "addons bg-addons" : "border-gray-300"
             }`}
             onClick={() => handleToggle(addon.id)}

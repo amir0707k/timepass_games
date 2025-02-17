@@ -5,7 +5,7 @@ import advanced from "/assets/images/icon-advanced.svg";
 import pro from "/assets/images/icon-pro.svg";
 import { useSubscription } from "../context/SubscriptionContext";
 
-function SelectPlan() {
+function SelectPlan({className}) {
   const { formData, setFormData, planPrices } = useSubscription();
 
   const handlePlanChange = (plan) => {
@@ -20,23 +20,23 @@ function SelectPlan() {
   };
 
   return (
-    <div>
+    <div className={`${className}`}>
       <h2 className="text-2xl font-bold mb-2 title">Select your plan</h2>
       <p className="info font-normal text-lg my-3 pr-6">
         You have the option of monthly or yearly billing.
       </p>
 
       {/* Plan options */}
-      <div className="flex flex-col md:flex-row gap-4 mb-6">
+      <div className="flex flex-col xl:flex-row gap-4 mb-6">
         {Object.entries(planPrices).map(([plan, price]) => (
           <div
             key={plan}
             onClick={() => handlePlanChange(plan)}
-            className={`flex border gap-3 items-center p-4 rounded cursor-pointer w-full md:w-1/3 ${
+            className={`flex border gap-3 items-center p-4 rounded cursor-pointer w-full xl:flex-col xl:items-start ${
               formData.plan === plan
-                ? "border-blue-600 bg-blue-50"
+                ? " border-[hsl(243,100%,62%)]  toggler-bg"
                 : "border-gray-300"
-            }`}
+            } hover:border-[hsl(243,100%,62%)]`}
           >
             <img
               src={plan === "arcade" ? arcade : plan === "advanced" ? advanced : pro}
